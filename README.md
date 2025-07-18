@@ -12,7 +12,10 @@ A fun and fast-paced JavaScript game where your goal is simple:
 > _“He who hesitates... gets whacked.”_
 
 ---
+## 🌐 Live Demo
 
+👉 [Play Whack-a-Diven on Netlify](https://whack-a-diven.netlify.app/)
+--
 ## 🎮 How to Play
 
 1. Hit the **Start Game** button.
