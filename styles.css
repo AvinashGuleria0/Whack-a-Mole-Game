@@ -1,0 +1,296 @@
+/* Reset & Layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #2c3e50, #3498db);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.container {
+  padding: 30px 40px;
+  border-radius: 20px;
+  max-width: 550px;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* ✅ Center children horizontally */
+  justify-content: center;/* ✅ Center children vertically */
+}
+
+
+
+/* Title */
+h1 {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+/* Info Panel */
+.info-panel {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: #2980b9;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3498db;
+}
+
+#game-area:fullscreen {
+  background-color: #282c34;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 1rem;
+}
+#game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center vertically */
+  width: 100%;
+  max-width: 600px;
+  margin: 0 ; /* Center horizontally */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+.info-panel {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* creates space between Score and Time */
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+#score, #timer {
+  font-weight: bold;
+  color: #ff9800; /* Bright color for visibility */
+}
+
+#grid {
+  width: 100%;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+}
+
+
+
+.square {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #ecf0f1;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  overflow: hidden;
+}
+
+.square:active {
+  transform: scale(0.95);
+}
+
+/* Mole Image */
+.mole {
+  width: 100%;
+  height: 100%;
+  background-image: url('mole.png.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.square:hover .mole {
+  transform: scale(1.1);
+}
+
+/* Message */
+#message {
+  margin-top: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #f9f9f9;
+  color: #222;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #333;
+  text-align: center;
+}
+
+.modal-content ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.modal-content li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #ddd;
+  opacity: 0.8;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.extras {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.difficulty-container {
+  display: flex;
+  gap: 10px;
+}
+
+.difficulty-btn {
+  padding: 6px 12px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.difficulty-btn.active {
+  background-color: #ff9800;
+  color: white;
+  font-weight: bold;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {       
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .info-panel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.hidden {
+  display: none !important;
+}

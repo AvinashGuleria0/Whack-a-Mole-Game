@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whack-a-Diven</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Whack-a-Diven 🎯</h1>
+  <div class="buttons">
+  <button id="start-btn">Start Game</button>
+  <button id="restart-btn" class="hidden">Restart</button>
+
+  <div class="extras" id="settings">
+    <button id="info-btn">ℹ️ Info</button>
+    <div class="difficulty-container">
+      <button class="difficulty-btn active" data-speed="1000">Easy</button>
+      <button class="difficulty-btn" data-speed="800">Medium</button>
+      <button class="difficulty-btn" data-speed="600">Hard</button>
+    </div>
+  </div>
+  <p id="message"></p>
+    </div>
+<div id="info-box" class="modal hidden">
+  <div class="modal-content">
+    <span id="close-modal" class="close-btn">&times;</span>
+    <h3>🎯 How to Play Whack-a-Mole</h3>
+    <ul>
+      <li>👀 Moles pop up randomly — stay alert!</li>
+      <li>🖱️ Click directly on the mole to score <strong>+1</strong> point.</li>
+      <li>❌ Clicking the wrong square deducts <strong>-1</strong> point.</li>
+      <li>⏱️ You have <strong>30 seconds</strong> per game.</li>
+      <li>⚡ Moles appear faster every 2 seconds as the game progresses.</li>
+      <li>🎮 Choose your difficulty before starting:</li>
+      <ul style="margin-left: 1rem;">
+        <li>🥱 <strong>Easy:</strong> Slower mole speed. Goal: <strong>20+ points</strong></li>
+        <li>😬 <strong>Medium:</strong> Moderate mole speed. Goal: <strong>30+ points</strong></li>
+        <li>😵 <strong>Hard:</strong> Fastest mole speed. Goal: <strong>40+ points</strong></li>
+      </ul>
+      <li>🏆 Reach the goal to become a <strong>Whack Master</strong>! 🔥</li>
+      <li>🔁 Press <strong>Restart</strong> to try again after the game ends.</li>
+    </ul>
+  </div>
+
+  
+</div>
+<div id="game-area">
+  <div class="info-panel">
+    <p>Score: <span id="score">0</span></p>
+    <p>Time: <span id="timer">30</span>s</p>
+  </div>
+
+  <div id="grid" class="grid"></div>
+</div>
+
+<div class="footer">
+    <p>Made By Kartikay Rattan</p>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
