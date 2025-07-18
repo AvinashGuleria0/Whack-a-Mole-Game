@@ -82,3 +82,4 @@ You’ll see his cheerful face popping up all over the board — **but don’t h
    ```bash
    git clone https://github.com/kartikay-28/Whack-a-Mole-Game
    cd Whack-a-Mole-Game
+Kartikay is asshole without diven permission he used the photo
